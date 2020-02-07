@@ -46,6 +46,28 @@ slot2=(Math.floor(Math.random()*100))%2;
       "slot2":slot2
     })
 
+   var medicine = [];
+
+   medicine.push({
+    "id": 1,
+    "name" : "ucetron",
+    "quantity" : 38,
+    "rate" : 30
+   })
+
+   medicine.push({
+    "id": 2,
+    "name" : "parace",
+    "quantity" : 50,
+    "rate" : 90
+   })
+   medicine.push({
+    "id": 3,
+    "name" : "zen",
+    "quantity" : 56,
+    "rate" : 77
+   })
+
      slot1=(Math.floor(Math.random()*100))%2;
       slot2=(Math.floor(Math.random()*100))%2;
 
@@ -72,6 +94,6 @@ slot2=(Math.floor(Math.random()*100))%2;
   //     "PatientPrescription" : Prescription
   //   })
   // }
-  return {  "doctors": doctors, "ambulances": ambulances }
+  return {  "doctors": doctors, "medicine":medicine, "ambulances": ambulances   }
 }
  module.exports = generatePatient

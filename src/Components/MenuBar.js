@@ -17,12 +17,15 @@ export class MenuBar extends Component{
                         <Link to='/AddPatient'><strong className='white'>AddPatients</strong></Link>
                     </li>
                     <li>
-                        <Link to='/PatientDetails'><strong className='white'>PatientDetails</strong></Link>
+                        <Link to='/PatientDetails'><strong className='white'>DoctorDetails</strong></Link>
                     </li>
                     <li>
                         <Link to='/AmbulanceDetails'><strong className='white'>AmbulanceDetails</strong></Link>
                     </li>
-                </ul>
+                    <li>
+                        <Link to='/MedicineDetails'><strong className='white'>MedicineDetails</strong></Link>
+                    </li>
+                </ul>   
             </section>
             </div>
         )
