@@ -1,6 +1,6 @@
 var faker = require('faker');
 function generatePatient(){
-  var doctors =[];
+  var doctors =[], ambulances = [];
 var slot1=(Math.floor(Math.random()*100))%2;
 var slot2=(Math.floor(Math.random()*100))%2;
   doctors.push({
@@ -24,7 +24,7 @@ slot2=(Math.floor(Math.random()*100))%2;
       "slot2":slot2
     })
       slot1=(Math.floor(Math.random()*100))%2;
-slot2=(Math.floor(Math.random()*100))%2;
+      slot2=(Math.floor(Math.random()*100))%2;
     doctors.push({
       "id": 3,
       "DoctorName": "Aditya",
@@ -45,6 +45,19 @@ slot2=(Math.floor(Math.random()*100))%2;
       "slot1":slot1,
       "slot2":slot2
     })
+
+     slot1=(Math.floor(Math.random()*100))%2;
+      slot2=(Math.floor(Math.random()*100))%2;
+
+    ambulances.push(
+    {
+      "id": 1,
+      "availability": slot1
+    })
+    ambulances.push({
+      "id": 2,
+      "availability": slot2
+    })
   // faker.seed(100);
   // for (var id = 1; id < 26; id++) {
   //   var Name = faker.name.firstName()
@@ -59,6 +72,6 @@ slot2=(Math.floor(Math.random()*100))%2;
   //     "PatientPrescription" : Prescription
   //   })
   // }
-  return {  "doctors": doctors }
+  return {  "doctors": doctors, "ambulances": ambulances }
 }
  module.exports = generatePatient
