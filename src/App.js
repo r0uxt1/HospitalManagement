@@ -31,7 +31,8 @@ LoginVerifier(){
   render(){
     return(
         <div>
-          {this.state.isLogin ? <Main/> : <AuthLogin handlerInput={this.handlerInput} login={this.LoginVerifier}/>}
+        <Main/>
+          
         </div>
     );
   }
