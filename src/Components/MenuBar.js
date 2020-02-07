@@ -20,7 +20,7 @@ export class MenuBar extends Component{
                         <Link to='/PatientDetails'><strong className='white'>DoctorDetails</strong></Link>
                     </li>
                     <li>
-                        <Link to='/AppointmentDetails'><strong className='white'>AppointentDetails</strong></Link>
+                        <Link to='/AmbulanceDetails'><strong className='white'>AmbulanceDetails</strong></Link>
                     </li>
                     <li>
                         <Link to='/MedicineDetails'><strong className='white'>MedicineDetails</strong></Link>
