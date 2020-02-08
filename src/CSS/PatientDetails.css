@@ -1,7 +1,7 @@
 .Pagination{
     display: inline;
     padding: 2px 5px;
-    border: 1px solid blue;
+    border: 1px solid gray;
 }
 .PaginationList{
     margin: 5px;
@@ -9,4 +9,32 @@
 }
 .Pagination:hover{
     cursor: pointer;
+    color: red;
+}
+
+.button{
+	font-size: 12px;
+	border-radius: 8px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	transition-duration: 0.2s;
+	background-color: #999;
+}
+
+.button:hover{
+	font-size: 14px;
+	background-color: white;
+}
+
+.table{
+	text-align: center;
+	table-layout: auto;
+	width: 200px;
+	margin: 10% 10% 10% 10%;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  width: 20px;
 }

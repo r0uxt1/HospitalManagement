@@ -1,4 +1,16 @@
-.dashBoard{
-    width: 118%;
-    height: 100%;
+.dashBoard {
+  display: block;
+  margin-left: 50%;
+  margin-right: auto;
+  width: 500px;
+  height: auto;
+  align-content: center;
+  margin-top: 5%;
+}
+
+.para{
+	width: 100%;
+	margin-left: 35%;
+	margin-top: 5%;
+	text-align: center;
 }

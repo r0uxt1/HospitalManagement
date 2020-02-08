@@ -1,10 +1,33 @@
 .MenuBar{
-    border: 1px solid blue;
-    background-color: blue;
-    color: white!important;
-    margin-left: 20px;
-    padding-right: 5%;
+    background-color: #222;
+    margin-left: 0px;
+    padding-right: 0%;
+    position: fixed;
+    height: 100%;
+    z-index: 1;
+    width: 170px;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.MenuBar h3{
+	color: white;
+}
+
+.MenuBar li{
+	border-bottom: 1px solid white;
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 18px;
+	font-color: #818181;
+	display: block;
 }
 .white{
-    color: white!important;
+    color: #818181;
+}
+
+.white:hover{
+	color: white;
 }

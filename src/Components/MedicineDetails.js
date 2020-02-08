@@ -106,7 +106,7 @@ check(start,end,val)
         let hours=currentTime.getHours();
     return(
         <div>
-            <table>
+            <table className="table">
                 <thead>
                 <tr>
                 <th>Sno</th>

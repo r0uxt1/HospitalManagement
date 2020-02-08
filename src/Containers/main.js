@@ -13,7 +13,7 @@ import Footer from '../Components/Footer.js'
 export class Main extends Component {
     constructor(props) {
         super(props);
-        this.title = 'Hospital Management';
+        this.title = 'NITT Hospital';
         this.patientObject = {PatientId:25};
     }
     //Function responsible for Handling the input when new Patient Details about to enter
