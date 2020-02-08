@@ -147,7 +147,7 @@ check(start,end,val)
         })
                      }} /> </td>
                         <td>{patient.id}</td>
-                        <td>{patient.DoctorName}</td>
+                        <td><a href="/doctorProfile">{patient.DoctorName}</a> </td>
                        
                         <td>{patient.Speciality}</td>
                     
