@@ -8,22 +8,19 @@ export class MenuBar extends Component{
         return (
             <div className='MenuBar' >
             <section className='container' >
-                <h3>DashBoard</h3>
+                <h3>Dashboard</h3>
                 <ul >
                     <li>
-                        <Link to='/ '><strong className='white'>HomePage</strong></Link>
+                        <Link to='/ '><strong className='white'>Home Page</strong></Link>
                     </li>
                     <li>
-                        <Link to='/AddPatient'><strong className='white'>AddPatients</strong></Link>
+                        <Link to='/PatientDetails'><strong className='white'>Doctor Details</strong></Link>
                     </li>
                     <li>
-                        <Link to='/PatientDetails'><strong className='white'>DoctorDetails</strong></Link>
+                        <Link to='/AmbulanceDetails'><strong className='white'>Ambulance Details</strong></Link>
                     </li>
                     <li>
-                        <Link to='/AmbulanceDetails'><strong className='white'>AmbulanceDetails</strong></Link>
-                    </li>
-                    <li>
-                        <Link to='/MedicineDetails'><strong className='white'>MedicineDetails</strong></Link>
+                        <Link to='/MedicineDetails'><strong className='white'>Medicine Details</strong></Link>
                     </li>
                 </ul>   
             </section>

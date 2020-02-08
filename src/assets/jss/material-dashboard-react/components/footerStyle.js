@@ -29,7 +29,10 @@ const footerStyle = {
     float: "right!important"
   },
   footer: {
+    width: "100%",
+    position: "fixed",
     bottom: "0",
+    left: "0", 
     borderTop: "1px solid " + grayColor[11],
     padding: "15px 0",
     ...defaultFont

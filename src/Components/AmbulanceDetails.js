@@ -1,5 +1,6 @@
 import React,{Component}  from 'react';
 import Modal from 'react-modal';
+import '../CSS/PatientDetails.css';
 
 export class AmbulanceDetails extends Component{
     constructor(props){
@@ -73,7 +74,7 @@ export class AmbulanceDetails extends Component{
         let hours=currentTime.getHours();
     return(
         <div>
-            <table>
+            <table className="table">
                 <thead>
                 <tr>
                 <th>AmbulanceID</th>

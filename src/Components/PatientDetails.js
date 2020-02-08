@@ -2,7 +2,6 @@ import React,{Component}  from 'react';
 import Rater from 'react-rater';
 import StarRatings from 'react-star-ratings';
 import 'react-rater/lib/react-rater.css';
-
 import '../CSS/PatientDetails.css';
 import Modal from 'react-modal';
 import { AddPatient } from './AddPatients';
@@ -45,7 +44,7 @@ export class PatientDetails extends Component{
     
     // let v;
     if(val==0)
-        return('Book Appointment');
+        return('Book Now!');
     return('No Booking');
 }
 check(start,end,val)
@@ -112,7 +111,7 @@ check(start,end,val)
         let hours=currentTime.getHours();
     return(
         <div>
-            <table>
+            <table className="table">
                 <thead>
                 <tr>
                 <th style={{color: 'white'}}>RatingCOMPAFS</th>
@@ -121,7 +120,8 @@ check(start,end,val)
                 <th>Speciality</th>
                 <th>Availability</th>
                 <th>Appointment</th>
-                <th>Current Rating   </th>
+                <th style={{color: 'white'}}>Appointment</th>
+                <th>Current Rating</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -152,7 +152,7 @@ check(start,end,val)
                         <td>{patient.Speciality}</td>
                     
                         <td>{(this.check(patient.start,patient.end,hours))}</td>
-                         <td><button id={patient.id} onClick={()=>{
+                         <td><button className="button" id={patient.id} onClick={()=>{
                             if(patient.slot1==0)
                             {
                                 patient.slot1=1;
@@ -178,7 +178,7 @@ check(start,end,val)
                     
 
 
-                    <td><button id={patient.id} onClick={()=>{
+                    <td><button className="button" id={patient.id} onClick={()=>{
                             if(patient.slot2==0)
                             {
                                 patient.slot2=1;
