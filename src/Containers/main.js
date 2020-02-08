@@ -7,9 +7,7 @@ import {
 import {
     Content
 } from '../Components/Content';
-import {
-    Footer
-} from '../Components/Footer'
+import Footer from '../Components/Footer.js'
 
 
 export class Main extends Component {

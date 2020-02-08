@@ -1,4 +1,8 @@
 import React,{Component}  from 'react';
+import Rater from 'react-rater';
+import StarRatings from 'react-star-ratings';
+import 'react-rater/lib/react-rater.css';
+
 import '../CSS/PatientDetails.css';
 import Modal from 'react-modal';
 import { AddPatient } from './AddPatients';
@@ -98,6 +102,8 @@ check(start,end,val)
 
         })
     }
+
+   
     render(){
         const indexOfLastData=this.state.CurrentPage*this.state.PatientPerPage;
         const indexOfFirstData=indexOfLastData-this.state.PatientPerPage;
@@ -109,17 +115,37 @@ check(start,end,val)
             <table>
                 <thead>
                 <tr>
+                <th style={{color: 'white'}}>RatingCOMPAFS</th>
                 <th>Sno</th>
                 <th>DoctorName</th>
                 <th>Speciality</th>
                 <th>Availability</th>
                 <th>Appointment</th>
-                <th>           </th>
+                <th>Current Rating   </th>
                 </tr>
                 </thead>
                 <tbody>
                 {currentPagePatient.map((patient)=>{return (
                     <tr>
+                    <td><StarRatings starSpacing='2px' starDimension='17px' changeRating={(value)=>{
+
+                        
+            // setValue(newValue);
+
+            var s=(patient.rating*patient.persons+value);
+            patient.persons+=1;
+            patient.rating=(s/patient.persons).toFixed(2);
+            fetch("http://localhost:3000/doctors/"+patient.id,{
+            method: 'PUT',
+            headers :{
+                'Content-Type': 'application/json' 
+                },
+            body : JSON.stringify(patient)
+        }).then((response)=>{
+            console.log(response);
+            this.componentWillMount();
+        })
+                     }} /> </td>
                         <td>{patient.id}</td>
                         <td>{patient.DoctorName}</td>
                        
@@ -175,7 +201,7 @@ check(start,end,val)
             alert("Not Able to add");
         }
                          }}>{this.checkslot(patient.slot2)}</button></td>
-                        <td></td>
+                        <td>{patient.rating}</td>
                          
                     </tr>
                     

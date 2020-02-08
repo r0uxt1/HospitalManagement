@@ -1,6 +1,6 @@
 var faker = require('faker');
 function generatePatient(){
-  var doctors =[];
+  var doctors =[], ambulances = [];
 var slot1=(Math.floor(Math.random()*100))%2;
 var slot2=(Math.floor(Math.random()*100))%2;
   doctors.push({
@@ -10,7 +10,9 @@ var slot2=(Math.floor(Math.random()*100))%2;
       "start":0,
       "end":10,
       "slot1":slot1,
-      "slot2":slot2
+      "slot2":slot2,
+      "rating":0,
+      "persons":0
     })
    slot1=(Math.floor(Math.random()*100))%2;
 slot2=(Math.floor(Math.random()*100))%2;
@@ -21,10 +23,12 @@ slot2=(Math.floor(Math.random()*100))%2;
       "start":10,
       "end":15,
       "slot1":slot1,
-      "slot2":slot2
+      "slot2":slot2,
+      "rating":0,
+      "persons":0
     })
       slot1=(Math.floor(Math.random()*100))%2;
-slot2=(Math.floor(Math.random()*100))%2;
+      slot2=(Math.floor(Math.random()*100))%2;
     doctors.push({
       "id": 3,
       "DoctorName": "Aditya",
@@ -32,7 +36,9 @@ slot2=(Math.floor(Math.random()*100))%2;
       "start":15,
       "end":20,
       "slot1":slot1,
-      "slot2":slot2
+      "slot2":slot2,
+      "rating":0,
+      "persons":0
     })
        slot1=(Math.floor(Math.random()*100))%2;
 slot2=(Math.floor(Math.random()*100))%2;
@@ -43,7 +49,44 @@ slot2=(Math.floor(Math.random()*100))%2;
       "start":20,
       "end":23,
       "slot1":slot1,
-      "slot2":slot2
+      "slot2":slot2,
+      "rating":0,
+      "persons":0
+    })
+
+   var medicine = [];
+
+   medicine.push({
+    "id": 1,
+    "name" : "ucetron",
+    "quantity" : 38,
+    "rate" : 30
+   })
+
+   medicine.push({
+    "id": 2,
+    "name" : "parace",
+    "quantity" : 50,
+    "rate" : 90
+   })
+   medicine.push({
+    "id": 3,
+    "name" : "zen",
+    "quantity" : 56,
+    "rate" : 77
+   })
+
+     slot1=(Math.floor(Math.random()*100))%2;
+      slot2=(Math.floor(Math.random()*100))%2;
+
+    ambulances.push(
+    {
+      "id": 1,
+      "availability": slot1
+    })
+    ambulances.push({
+      "id": 2,
+      "availability": slot2
     })
   // faker.seed(100);
   // for (var id = 1; id < 26; id++) {
@@ -59,6 +102,6 @@ slot2=(Math.floor(Math.random()*100))%2;
   //     "PatientPrescription" : Prescription
   //   })
   // }
-  return {  "doctors": doctors }
+  return {  "doctors": doctors, "medicine":medicine, "ambulances": ambulances   }
 }
  module.exports = generatePatient
