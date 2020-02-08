@@ -10,7 +10,9 @@ var slot2=(Math.floor(Math.random()*100))%2;
       "start":0,
       "end":10,
       "slot1":slot1,
-      "slot2":slot2
+      "slot2":slot2,
+      "rating":0,
+      "persons":0
     })
    slot1=(Math.floor(Math.random()*100))%2;
 slot2=(Math.floor(Math.random()*100))%2;
@@ -21,7 +23,9 @@ slot2=(Math.floor(Math.random()*100))%2;
       "start":10,
       "end":15,
       "slot1":slot1,
-      "slot2":slot2
+      "slot2":slot2,
+      "rating":0,
+      "persons":0
     })
       slot1=(Math.floor(Math.random()*100))%2;
       slot2=(Math.floor(Math.random()*100))%2;
@@ -32,7 +36,9 @@ slot2=(Math.floor(Math.random()*100))%2;
       "start":15,
       "end":20,
       "slot1":slot1,
-      "slot2":slot2
+      "slot2":slot2,
+      "rating":0,
+      "persons":0
     })
        slot1=(Math.floor(Math.random()*100))%2;
 slot2=(Math.floor(Math.random()*100))%2;
@@ -43,7 +49,9 @@ slot2=(Math.floor(Math.random()*100))%2;
       "start":20,
       "end":23,
       "slot1":slot1,
-      "slot2":slot2
+      "slot2":slot2,
+      "rating":0,
+      "persons":0
     })
 
    var medicine = [];
