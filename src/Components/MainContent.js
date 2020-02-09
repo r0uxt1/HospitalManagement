@@ -7,6 +7,7 @@ import {MedicineDetails} from './MedicineDetails.js';
 import {AmbulanceDetails} from './AmbulanceDetails.js';
 import UserProfile from './docterProfile.js'
 import medicineProfile from './medicineProfile.js'
+import SimpleForm from './chatbot.js'
 
 
 //This Component is responsible for Handling the routes of the application
@@ -22,6 +23,8 @@ export const MainContent =(props)=>{
                    <Route path='/AmbulanceDetails' exact component={AmbulanceDetails} />
                    <Route path='/doctorProfile' exact component= {UserProfile} />
                    <Route path='/medicineProfile' exact component= {medicineProfile} />
+                   <Route path='/chatbot' exact component= {SimpleForm} />
+
                </Switch>
             </div>
         )

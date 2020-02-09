@@ -24,6 +24,9 @@ export class MenuBar extends Component{
                     <li>
                         <a href='/MedicineDetails'><strong className='white'>Medicines</strong></a>
                     </li>
+                    <li>
+                        <a href='/chatbot'><strong className='white'>Chatbot</strong></a>
+                    </li>
                 </ul>   
             </section>
             </div>
