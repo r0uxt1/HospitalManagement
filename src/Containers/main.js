@@ -40,10 +40,10 @@ export class Main extends Component {
         }
    
     render() {
-        return ( <div className = 'container ' >
-            <Header title = {this.title} className = 'row' />
+        return ( <div  >
+            
             <Content className = 'row' handlerInput = {this.handlerInput.bind(this)} addPatient = {this.newPatientDetails.bind(this)}/>
-            <Footer className = 'row' />
+            
             </div>
         )
     }

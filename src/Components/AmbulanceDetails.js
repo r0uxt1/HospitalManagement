@@ -1,6 +1,16 @@
 import React,{Component}  from 'react';
 import Modal from 'react-modal';
 import '../CSS/PatientDetails.css';
+import GridItem from "./Grid/GridItem.js";
+import GridContainer from "./Grid/GridContainer.js";
+import Card from "./Card/Card.js";
+
+import CardAvatar from "./Card/CardAvatar.js";
+
+import CardFooter from "./Card/CardFooter.js";
+import CardHeader from "./Card/CardHeader.js";
+import CardBody from "./Card/CardBody.js";
+
 
 export class AmbulanceDetails extends Component{
     constructor(props){
@@ -74,7 +84,24 @@ export class AmbulanceDetails extends Component{
         let hours=currentTime.getHours();
     return(
         <div>
-            <table className="table">
+                     <GridContainer>
+                  <GridItem xs={12} sm={12} md={1}>
+
+
+                  </GridItem>
+
+                  <GridItem xs={12} sm={12} md={8}>
+         <table className="table">
+         <thead>
+                <tr>
+            <CardHeader color="primary">
+                <h4 >Ambulance Status</h4>
+                
+            </CardHeader>
+
+                 </tr>
+
+                </thead>
                 <thead>
                 <tr>
                 <th>AmbulanceID</th>
@@ -99,6 +126,14 @@ export class AmbulanceDetails extends Component{
             })}
             
             </ul>
+
+                  </GridItem>
+
+                     </GridContainer>
+
+
+
+   
         </div>
     )
     }

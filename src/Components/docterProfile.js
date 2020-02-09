@@ -4,6 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 // core components
 //import CustomInput from "components/CustomInput/CustomInput.js";
+import GridItem from "./Grid/GridItem.js";
+import GridContainer from "./Grid/GridContainer.js";
 import Button from "./CustomButtons/Button.js";
 import Card from "./Card/Card.js";
 import CardHeader from "./Card/CardHeader.js";
@@ -32,6 +34,9 @@ const styles = {
   },
   divstyles:{
     margin:"0 auto",
+  },
+   topstyle:{
+    marginTop:"20vh",
   }
 };
 
@@ -44,26 +49,44 @@ export default function UserProfile() {
   const classes = useStyles();
   return (
     <div className={classes.divstyles}>
-      
-          <Card profile>
-            <CardAvatar profile>
-              <a href="#pablo" onClick={e => e.preventDefault()}>
-                <img src={avatar} alt="..." />
-              </a>
-            </CardAvatar>
-            <CardBody profile>
-              <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-              <h4 className={classes.cardTitle}>Alec Thompson</h4>
-              <p className={classes.description}>
-                Don{"'"}t be scared of the truth because we need to restart the
-                human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
-              </p>
-              <Button color="primary" round>
-                Follow
-              </Button>
-            </CardBody>
-          </Card>
+          <GridContainer>
+                  <GridItem xs={12} sm={12} md={2}>
+
+
+                  </GridItem>
+
+                  <GridItem xs={12} sm={12} md={8} >
+                      <Card profile className={classes.topstyle}>
+                        <CardAvatar profile>
+                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <img src={avatar} alt="..." />
+                          </a>
+                        </CardAvatar>
+                        <CardBody profile>
+                          <h4 className={classes.cardCategory}>Dr. Sudarshan Avale</h4>
+                          <h6 className={classes.cardTitle}>MBBS MD (Medicine)</h6>
+                          <p className={classes.description}>
+                            Get an Expert Medical Opinion from one of our 
+                            world-renowned specialists so you can have the answers 
+                            and confidence to make informed decisions about your health.
+                          </p>
+                          <Button color="primary" round>
+                            Contact
+                          </Button>
+                        </CardBody>
+                      </Card>
+
+
+                  </GridItem>
+ 
+ 
+                  <GridItem xs={12} sm={12} md={2}>
+
+
+                  </GridItem>
+          </GridContainer>
+
+
       
     </div>
   );
