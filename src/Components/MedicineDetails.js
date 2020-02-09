@@ -2,6 +2,16 @@ import React,{Component}  from 'react';
 import '../CSS/PatientDetails.css';
 import Modal from 'react-modal';
 import { AddPatient } from './AddPatients';
+import GridItem from "./Grid/GridItem.js";
+import GridContainer from "./Grid/GridContainer.js";
+import Card from "./Card/Card.js";
+
+import CardAvatar from "./Card/CardAvatar.js";
+
+import CardFooter from "./Card/CardFooter.js";
+import CardHeader from "./Card/CardHeader.js";
+import CardBody from "./Card/CardBody.js";
+
 
 
 //This Component Contains the PatientDtails 
@@ -106,7 +116,24 @@ check(start,end,val)
         let hours=currentTime.getHours();
     return(
         <div>
-            <table className="table">
+             <GridContainer>
+                  <GridItem xs={12} sm={12} md={1}>
+
+
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={8}>
+
+<table className="table">
+               <thead>
+                <tr>
+            <CardHeader color="primary">
+                <h4 >Available Medicines</h4>
+                
+            </CardHeader>
+
+                 </tr>
+
+                </thead>
                 <thead>
                 <tr>
                 <th>Sno</th>
@@ -120,7 +147,7 @@ check(start,end,val)
                 {currentPagePatient.map((medicine)=>{return (
                     <tr>
                         <td>{medicine.id}</td>
-                        <td>{medicine.name}</td>
+                        <td><a href="/medicineProfile">{medicine.name}</a></td>
                         <td>{medicine.quantity}</td>
                        
                         <td>{medicine.rate}</td>
@@ -140,6 +167,9 @@ check(start,end,val)
             })}
             
             </ul>
+                  </GridItem>
+             </GridContainer>
+            
         </div>
     )
     }

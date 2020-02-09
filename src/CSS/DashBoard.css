@@ -1,33 +1,56 @@
 .MenuBar{
-    background-color: #222;
+    background-color: #272727;
     margin-left: 0px;
+
     padding-right: 0%;
+  /*  padding-top:11%;*/
     position: fixed;
     height: 100%;
     z-index: 1;
-    width: 170px;
+    width: 20%;
     top: 0;
     left: 0;
     overflow-x: hidden;
-    padding-top: 20px;
+    text-align: center;
+    /*padding-top: ;*/
 }
 
-.MenuBar h3{
-	color: white;
+/*.MenuBar h3{
+    color: white;
+}*/
+.image
+{
+    
+    text-align: center;
+    margin-bottom: 50px;
 }
-
+ul
+{
+    margin-top:25%;
+}
 .MenuBar li{
-	border-bottom: 1px solid white;
-	padding: 6px 8px 6px 16px;
-	text-decoration: none;
-	font-size: 18px;
-	font-color: #818181;
-	display: block;
+    font-family:Courier;
+    border-bottom: 0.5px solid #747474;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    font-color: #747474;
+    display: block;
+    margin-bottom:15%;
+}
+a{
+    text-decoration: none;
+}
+a: hover
+{
+    text-decoration: none;
 }
 .white{
-    color: #818181;
+    color: #747474;
+
 }
 
 .white:hover{
-	color: white;
+text-decoration: none;
+    color: #14AC6C;
 }

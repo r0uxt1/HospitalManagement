@@ -2,15 +2,81 @@ import React,{Component}  from 'react';
 import Rater from 'react-rater';
 import StarRatings from 'react-star-ratings';
 import 'react-rater/lib/react-rater.css';
+import { makeStyles } from "@material-ui/core/styles";
 import '../CSS/PatientDetails.css';
 import Modal from 'react-modal';
 import { AddPatient } from './AddPatients';
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import GridItem from "./Grid/GridItem.js";
+import GridContainer from "./Grid/GridContainer.js";
+import Button from "./CustomButtons/Button.js";
+import Card from "./Card/Card.js";
+
+import CardAvatar from "./Card/CardAvatar.js";
+
+import CardFooter from "./Card/CardFooter.js";
+import CardHeader from "./Card/CardHeader.js";
+import CardBody from "./Card/CardBody.js";
+
+import AddAlert from "@material-ui/icons/AddAlert";
+import Alert from '@material-ui/lab/Alert';
+
+
+
+const styles = {
+  cardCategoryWhite: {
+    "&,& a,& a:hover,& a:focus": {
+      color: "rgba(255,255,255,.62)",
+      margin: "0",
+      fontSize: "14px",
+      marginTop: "0",
+      marginBottom: "0"
+    },
+    "& a,& a:hover,& a:focus": {
+      color: "#FFFFFF"
+    }
+  },
+  cardTitleWhite: {
+    color: "#FFFFFF",
+    marginTop: "0px",
+    minHeight: "auto",
+    fontWeight: "300",
+    fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+    marginBottom: "3px",
+    textDecoration: "none",
+    "& small": {
+      color: "#777",
+      fontSize: "65%",
+      fontWeight: "400",
+      lineHeight: "1"
+    }
+  }
+};
+
+const useStyles = makeStyles(styles);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //This Component Contains the PatientDtails 
 export class PatientDetails extends Component{
+    
     constructor(props){
         super(props);
+        
         this.state={PatientData:[],CurrentPage:1,PatientPerPage:10,PageNumbers:[],IsModalOpen:false,patientSelected:{}};
         this.handlePage=this.handlePage.bind(this);
         this.openModal=this.openModal.bind(this);
@@ -104,6 +170,7 @@ check(start,end,val)
 
    
     render(){
+
         const indexOfLastData=this.state.CurrentPage*this.state.PatientPerPage;
         const indexOfFirstData=indexOfLastData-this.state.PatientPerPage;
         const currentPagePatient=this.state.PatientData.slice(indexOfFirstData,indexOfLastData);
@@ -111,8 +178,28 @@ check(start,end,val)
         let hours=currentTime.getHours();
     return(
         <div>
+          
+        <GridContainer>
+                  <GridItem xs={12} sm={12} md={1}>
+
+
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={8}>
+
+
             <table className="table">
                 <thead>
+                <tr>
+            <CardHeader color="primary">
+                <h4 >Summary Table</h4>
+                
+            </CardHeader>
+
+                 </tr>
+
+                </thead>
+                <thead>
+
                 <tr>
                 <th style={{color: 'white'}}>RatingCOMPAFS</th>
                 <th>Sno</th>
@@ -120,7 +207,7 @@ check(start,end,val)
                 <th>Speciality</th>
                 <th>Availability</th>
                 <th>Appointment</th>
-                <th style={{color: 'white'}}>Appointment</th>
+                <th >Appointment</th>
                 <th>Current Rating</th>
                 </tr>
                 </thead>
@@ -147,12 +234,13 @@ check(start,end,val)
         })
                      }} /> </td>
                         <td>{patient.id}</td>
-                        <td>{patient.DoctorName}</td>
+                        <td><a href="/doctorProfile">{patient.DoctorName}</a> </td>
                        
                         <td>{patient.Speciality}</td>
                     
                         <td>{(this.check(patient.start,patient.end,hours))}</td>
-                         <td><button className="button" id={patient.id} onClick={()=>{
+                         <td><Button color="primary" round  id={patient.id} onClick={()=>{
+                            <Alert severity="warning">This is a warning alert — check it out!</Alert>
                             if(patient.slot1==0)
                             {
                                 patient.slot1=1;
@@ -173,12 +261,12 @@ check(start,end,val)
         {
             alert("Not Able to add");
         }
-                         }}>{this.checkslot(patient.slot1)}</button></td>
+                         }}>{this.checkslot(patient.slot1)}</Button></td>
                                       
                     
 
 
-                    <td><button className="button" id={patient.id} onClick={()=>{
+                    <td><Button color="primary" round  id={patient.id} onClick={()=>{
                             if(patient.slot2==0)
                             {
                                 patient.slot2=1;
@@ -200,7 +288,7 @@ check(start,end,val)
         {
             alert("Not Able to add");
         }
-                         }}>{this.checkslot(patient.slot2)}</button></td>
+                         }}>{this.checkslot(patient.slot2)}</Button></td>
                         <td>{patient.rating}</td>
                          
                     </tr>
@@ -221,6 +309,14 @@ check(start,end,val)
             })}
             
             </ul>
+
+
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={3}>
+
+
+                  </GridItem>
+        </GridContainer>          
         </div>
     )
     }

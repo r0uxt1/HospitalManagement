@@ -8,23 +8,25 @@ export class MenuBar extends Component{
         return (
             <div className='MenuBar' >
             <section className='container' >
-                <h3>Dashboard</h3>
+            <div className="image">
+                <img height="140px"  src="https://i.ibb.co/jyFd1hg/websi.png"></img>
+                </div>
                 <ul >
                     <li>
-                        <Link to='/ '><strong className='white'>Home Page</strong></Link>
+                        <a href='/ '><strong className='white'>Home</strong></a>
                     </li>
                     <li>
-                        <Link to='/PatientDetails'><strong className='white'>Doctor Details</strong></Link>
+                        <a href='/PatientDetails' ><strong className='white'>Doctors</strong></a>
                     </li>
                     <li>
-                        <Link to='/AmbulanceDetails'><strong className='white'>Ambulance Details</strong></Link>
+                        <a href='/AmbulanceDetails'><strong className='white'>Ambulances</strong></a>
                     </li>
                     <li>
-                        <Link to='/MedicineDetails'><strong className='white'>Medicine Details</strong></Link>
+                        <a href='/MedicineDetails'><strong className='white'>Medicines</strong></a>
                     </li>
                 </ul>   
             </section>
             </div>
         )
     }
-} 
+}
