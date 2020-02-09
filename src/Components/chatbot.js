@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import ChatBot from 'react-simple-chatbot';
 import Review from './Review';
+import '../CSS/bot.css';
 
 class SimpleForm extends Component {
     render() {
       return (
-        <ChatBot
+        <ChatBot className="bot"
           steps={[
             {
               id: '1',
-              message: 'What is your name?',
+              message: 'Hi! Welcome to NITT Hospital, what is your name?',
               trigger: 'name',
             },
             {
